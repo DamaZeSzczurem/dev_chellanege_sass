@@ -1,2 +1,2 @@
 # dev_chellanege_sass
-Project from facebook groupe Weekly Dev Chellange.
+Project from facebook group 'Weekly Dev Chellange'.
