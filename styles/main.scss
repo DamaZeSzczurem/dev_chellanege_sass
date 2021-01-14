@@ -1,0 +1,21 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@import 'mediaQuery';
+@import 'var';
+@import 'fonts';
+@import 'mixin';
+@import 'nav';
+@import 'header';
+@import 'about';
+@import 'services';
+@import 'subscribe';
+@import 'gallery';
+@import 'blog';
+@import 'contact';
+@import 'footer';

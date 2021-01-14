@@ -1,0 +1,87 @@
+.services{
+  @include section-padding;
+  background-color: rgb(112, 191, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  &_list{
+    list-style: none;
+    li{
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: $margin;
+      transition: background-color 0.5s;
+      transition: margin-left 0.5s;
+
+      a{
+        height: 10vh;
+        width:20vw;
+        text-decoration: none;
+        font-size: $btn-text;
+        display: flex;
+        align-items: center;
+
+        span{ 
+          text-align: center;
+          color: black;
+          width: 20vw;
+        }
+        img{
+          height: 10vh-$padding*4;
+          padding: $padding*2;
+          border-left: 0.1em gray solid;
+        }
+      }
+      &:hover{
+        background-color: rgb(228, 225, 225);
+        margin-left: 0;
+      }
+    }
+  }
+  &_header-container{
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    background: url('./background/service-background.png') no-repeat center;
+    background-size: auto 100%;
+    .header--big{
+      font-weight: lighter;
+      text-align: center;
+      color: whitesmoke;
+    }
+  }
+
+  @include respond-to('small') {
+    flex-direction: column-reverse;
+    &_list{
+      li{
+        width:100%;
+        
+      a{
+        width:100%;
+          span{ 
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to('large') {
+    flex-direction: row;
+    height: 70vh;
+    &_list{
+      li{
+        width:20vw;
+        
+      a{
+        width:20vw;
+          span{ 
+            width: 20vw;
+          }
+        }
+      }
+
+    }
+  }
+} 

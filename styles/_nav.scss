@@ -1,0 +1,95 @@
+.main-nav{
+  padding: 2vh 10vw 2vh 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 85vw;
+  height: 7vh;
+  background-color: rgba(255, 255, 255, 0.418);
+  z-index: 100;
+  transition: all 2s;
+  &--small{
+    background-color: rgb(255, 255, 255);
+    height: 4vh;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  &_logo{
+    font-size: 3.5rem;
+    transition: all 1s;
+    &--small{
+      font-size: 2rem;
+      font-weight: 100;
+    }
+  }
+  &_checkbox{
+    display: none;
+  }
+  &_icon{
+    font-size: $small-heading;
+  }
+  &_list{ 
+    list-style: none;
+
+    li :active{
+      border-top-style: solid;
+      border-color:rgb(255, 96, 51); 
+    }
+  }
+  @include respond-to('small') { 
+    &_checkbox:checked ~ &_list {
+      line-height: 2;
+      padding: 15px 0;
+      transition: all 0.5s;
+   }
+    &_list{
+      position: absolute;
+      display: block;
+      top: 10vh;
+      right: 0;
+      text-align: center;
+      line-height: 0;
+      background-color:rgb(207, 204, 204);
+      width: 30%;
+      &--small{
+        top:8vh;
+      }
+      li{
+        overflow: hidden;
+      }
+      li:hover{
+        background-color: rgb(255, 255, 255);
+      }
+    }
+  }
+  @include respond-to('large') {
+    &_list{
+      position: static;
+      display: flex;
+      line-height: normal;
+      width: 50%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 5vh;
+      background-color: rgba(255, 255, 255, 0.418);
+      &--small{
+        font-weight: 100;
+      }
+      li:hover{
+        border-top-style: solid;
+        border-color:rgb(255, 96, 51); 
+      }
+    } 
+    .main-nav_icon {
+      display: none;
+   }
+  }
+ 
+  
+}

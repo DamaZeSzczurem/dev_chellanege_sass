@@ -1,0 +1,53 @@
+.subscribe{
+  @include section-padding;
+  height:50vh;
+  background: url('./background/subscribe-background.png') no-repeat right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  
+  
+  .header--small{
+    font-weight: lighter;
+    margin: $margin;
+  }
+
+  .text{
+    margin-bottom: $margin;
+    width: 40vw;
+    text-align: left;
+    font-weight: lighter;
+    line-height: 2rem;
+  }
+  &_input{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: $text;
+    font-weight: lighter;
+    height: 5.5vh;
+    width: 38vw;
+    padding-left: $padding;
+  }
+  &_btn{
+    @include btn;
+    margin-left: $margin;
+    background-color: rgb(150, 185, 44);
+    &:hover{
+      background-color: rgb(96, 117, 31);
+    }
+  }
+  @include respond-to('small') {
+    &_input{
+      display: inline;
+      margin-left: $margin;
+    }
+    
+  }
+  @include respond-to('large') {
+    &_input{
+      display: block;
+    }
+ 
+  }
+}

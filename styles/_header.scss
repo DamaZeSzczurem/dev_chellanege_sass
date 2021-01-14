@@ -1,0 +1,41 @@
+.home{
+  @include section-padding;
+
+  display: flex;
+  align-items: center;
+  height:90vh;
+  &_text-container{
+    *{
+      margin: $margin;
+    }
+    .home_btn{
+      @include btn;
+      background-color: rgb(255, 95, 51);
+    }
+    .home_btn:hover{
+      color: rgb(167, 167, 167);
+      background-color: rgb(148, 54, 28);
+    }
+  }
+  &_icon{
+    position: absolute;
+    width: 1vw;
+    bottom: 10vh;
+    margin-left: 50%;
+  }  
+  @include respond-to('small') {
+    background-color: white;
+    &_text-container{
+      text-align: center;
+    }
+
+  }
+  @include respond-to('large') {
+    background: url('./background/header-background.png') no-repeat right;
+    background-size: cover;
+    &_text-container{
+      width: 30vw;
+      text-align: left;
+    }
+  }
+}

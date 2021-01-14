@@ -1,0 +1,17 @@
+footer{
+  @include section-padding;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  border-top-style: solid;
+  border-top-color:rgb(185, 185, 185);;
+  color: rgb(185, 185, 185);
+  strong{
+    font-size: $text*2;
+  }
+  span{
+    color: red;
+  }
+}

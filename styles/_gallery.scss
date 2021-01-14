@@ -1,0 +1,45 @@
+.gallery{
+  @include section-padding;
+  background-color: rgb(255, 233, 47);
+  padding-top: $padding*5;
+  padding-bottom: $padding*5;
+  color: black;
+  text-align: center;
+
+  .header--big{
+    font-weight: lighter;
+  }
+  .text{
+    width: 40vw;
+    margin: $margin auto;
+  }
+
+  &_img-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  
+    &--small{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &_btn-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  &_btn{
+    @include btn;
+    background-color: rgb(85, 133, 162);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    &:hover{
+      background-color: rgb(69, 94, 109);
+    }
+  }
+}

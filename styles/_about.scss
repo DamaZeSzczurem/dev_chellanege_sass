@@ -1,0 +1,21 @@
+.about{
+  @include section-padding;
+  background: radial-gradient(rgb(0, 196, 196),rgb(0, 156, 156));
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  color: whitesmoke;
+  transition: all 1s;
+  &_img{
+    width: 35vw;
+    height: auto;
+  }  
+  &_text-container{
+    display: block;
+    width: 60vw;
+    margin: $margin 0;
+    .header--big{
+      font-weight: lighter;
+    }
+  }
+}
